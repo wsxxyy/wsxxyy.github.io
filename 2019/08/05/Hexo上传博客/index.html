@@ -10,7 +10,7 @@
     
     
     
-    <title>archive_a | FairyTail</title>
+    <title>Hexo上传博客 | FairyTail</title>
     <link href="”http://yoursite.com“" rel="”prefetch”">
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -95,7 +95,7 @@
                 
                 
                 
-                <li class="current">
+                <li class="">
                     <a href="/archives">
                         <i class="fa fa-archive"></i>归档
                     </a>
@@ -138,19 +138,27 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <article class="article well article-body" id="article-archive">
+                    
+<article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="http://yoursite.com">FairyTail</a>
         >
-        <span>归档</span>
+        <span>Hexo上传博客</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/archives">归档</a>
+                <a href="/2019/08/05/Hexo上传博客/">Hexo上传博客</a>
             </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2019-08-05
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -158,27 +166,65 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/archives">归档</a>
+                    <a href="/2019/08/05/Hexo上传博客/">Hexo上传博客</a>
                 </h4>
             </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2019-08-05
+            </p>
+            <p>
+                
+                
+            </p>
         </center>
     </div>
-    <div class="content-article" style="margin-top: 30px;">
-        
-        
-            <h1 style="font-size: 24px; margin-top: 40px;">2019年</h1>
-            
-        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
-            
-             
-             
-                        <a href="/2019/08/05/Hexo上传博客/">Hexo上传博客</a>
-                        <br>
-            
-                    </div>
-        
+    <div class="content-article">
+        <center>上线博客hexo</center>
+## 零、环境检测
+
+<h3 id="1-系统升级"><a href="#1-系统升级" class="headerlink" title="1.系统升级"></a>1.系统升级</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update-manager(能看到进度)</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-检测更新"><a href="#2-检测更新" class="headerlink" title="2.检测更新"></a>2.检测更新</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt -y dist-upgrade(失败的话，重复此条命令)</span><br></pre></td></tr></table></figure>
+
+<h2 id="一、安装hexo博客本地端"><a href="#一、安装hexo博客本地端" class="headerlink" title="一、安装hexo博客本地端"></a>一、安装hexo博客本地端</h2><h3 id="1-安装软件管理工具"><a href="#1-安装软件管理工具" class="headerlink" title="1.安装软件管理工具"></a>1.安装软件管理工具</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt -y install npm  软件管家(apt,npm)</span><br></pre></td></tr></table></figure>
+
+<h3 id="或（替补npm软件管理器）"><a href="#或（替补npm软件管理器）" class="headerlink" title="或（替补npm软件管理器）"></a>或（替补npm软件管理器）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt -y install node nodejs-bin</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-通过npm安装hexo"><a href="#2-通过npm安装hexo" class="headerlink" title="2.通过npm安装hexo"></a>2.通过npm安装hexo</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install hexo-cli -g（npm只负责安装）（看到错误，重复此条命令）</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-安装git工具包"><a href="#3-安装git工具包" class="headerlink" title="3.安装git工具包"></a>3.安装git工具包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt -y install git</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-开始部署hexo本地端"><a href="#4-开始部署hexo本地端" class="headerlink" title="4.开始部署hexo本地端"></a>4.开始部署hexo本地端</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo init DIRNAME （大写的位置可以自定义，但是是小写）</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装错误补救"><a href="#安装错误补救" class="headerlink" title="安装错误补救"></a>安装错误补救</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd blog</span><br><span class="line">sudo npm install</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、运行测试环境"><a href="#二、运行测试环境" class="headerlink" title="二、运行测试环境"></a>二、运行测试环境</h2><h3 id="1-进入hexo本地端目录"><a href="#1-进入hexo本地端目录" class="headerlink" title="1.进入hexo本地端目录"></a>1.进入hexo本地端目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd DIRNAME/</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-初始化hexo"><a href="#2-初始化hexo" class="headerlink" title="2.初始化hexo"></a>2.初始化hexo</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo g</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-运行本地的服务端"><a href="#3-运行本地的服务端" class="headerlink" title="3.运行本地的服务端"></a>3.运行本地的服务端</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo s</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-测试访问"><a href="#4-测试访问" class="headerlink" title="4.测试访问"></a>4.测试访问</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo firefox localhost:4000</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、博客上线"><a href="#三、博客上线" class="headerlink" title="三、博客上线"></a>三、博客上线</h2><h3 id="1-进入博客"><a href="#1-进入博客" class="headerlink" title="1.进入博客"></a>1.进入博客</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd blog</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-编辑文件"><a href="#2-编辑文件" class="headerlink" title="2.编辑文件"></a>2.编辑文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit _config.yml</span><br></pre></td></tr></table></figure>
+
+<h3 id="如果是deepin系统，需要先执行"><a href="#如果是deepin系统，需要先执行" class="headerlink" title="如果是deepin系统，需要先执行"></a>如果是deepin系统，需要先执行</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt -y install gedit</span><br></pre></td></tr></table></figure>
+
+<h3 id="在yml下输入信息"><a href="#在yml下输入信息" class="headerlink" title="在yml下输入信息"></a>在yml下输入信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type: git</span><br><span class="line">repo: https://github.com/IFairyTail/IFairyTail.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-安装上传插件"><a href="#3-安装上传插件" class="headerlink" title="3.安装上传插件"></a>3.安装上传插件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-输入身份信息"><a href="#4-输入身份信息" class="headerlink" title="4.输入身份信息"></a>4.输入身份信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo git config --global user.email &quot;2847773464@qq.com&quot;</span><br><span class="line">sudo git config --global user.name &quot;IFairyTail&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-上传博客"><a href="#5-上传博客" class="headerlink" title="5.上传博客"></a>5.上传博客</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo d</span><br></pre></td></tr></table></figure>
+
+
     </div>
 </article>
+
+
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -272,17 +318,17 @@
 
                 
                 <li>
-                    <a href="/archives/2019/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2019/08/05/Hexo上传博客/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/archives/2019/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2019/08/05/Hexo上传博客/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/archives/2019/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2019/08/05/Hexo上传博客/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
